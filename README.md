@@ -1,4 +1,4 @@
-﻿# LEVI Software & Consulting - Website
+# LEVI Software & Consulting - Website
 
 ## Cerinte
 - Node.js 18+
@@ -26,3 +26,4 @@ npm run preview
 ## Configurare formular
 - Poti integra Formspree sau EmailJS.
 - Actualizeaza valorile din `.env.example` si creeaza un `.env`.
+Last update: 2025-12-23
