@@ -41,7 +41,7 @@ const PortfolioCase = () => {
       <section className="pt-28 pb-12">
         <Container className="space-y-6">
           <Link to="/portofoliu" className="text-xs text-muted hover:text-accent">
-            <- Inapoi la portofoliu
+            {"<- "}Inapoi la portofoliu
           </Link>
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="space-y-6">
