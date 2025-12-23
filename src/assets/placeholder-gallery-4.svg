@@ -1,0 +1,13 @@
+﻿<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B101A" />
+      <stop offset="1" stop-color="#111827" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect x="80" y="80" width="1040" height="640" rx="28" fill="rgba(15,23,42,0.8)" stroke="rgba(148,163,184,0.2)" />
+  <text x="120" y="180" fill="#22D3EE" font-size="28" font-family="Space Grotesk, Arial, sans-serif">LEVI SOFTWARE</text>
+  <text x="120" y="240" fill="#E2E8F0" font-size="44" font-family="Space Grotesk, Arial, sans-serif">Galerie 04</text>
+  <text x="120" y="300" fill="#94A3B8" font-size="22" font-family="Manrope, Arial, sans-serif">Placeholder local - inlocuieste cu foto reala</text>
+</svg>

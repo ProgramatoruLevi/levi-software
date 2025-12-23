@@ -1,0 +1,155 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 11 14 22;
+  --surface: 20 26 38;
+  --card: 26 34 50;
+  --text: 226 232 240;
+  --muted: 148 163 184;
+  --accent: 59 130 246;
+  --accent-2: 16 185 129;
+  --border: 51 65 85;
+  --success: 34 197 94;
+  --warning: 245 158 11;
+  --danger: 239 68 68;
+  --font-body: "Manrope", ui-sans-serif, system-ui;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui;
+}
+
+.theme-light {
+  --bg: 248 250 252;
+  --surface: 241 245 249;
+  --card: 255 255 255;
+  --text: 15 23 42;
+  --muted: 71 85 105;
+  --accent: 8 145 178;
+  --accent-2: 99 102 241;
+  --border: 226 232 240;
+}
+
+html[data-theme="funds"] {
+  --bg: 245 242 235;
+  --surface: 234 229 219;
+  --card: 255 252 246;
+  --text: 36 38 34;
+  --muted: 86 94 80;
+  --accent: 16 114 67;
+  --accent-2: 201 145 36;
+  --border: 205 193 170;
+  --font-body: "Source Sans 3", ui-sans-serif, system-ui;
+  --font-display: "Merriweather", ui-serif, Georgia, serif;
+}
+
+html[data-theme="photo"] {
+  --bg: 12 10 16;
+  --surface: 24 16 36;
+  --card: 30 20 46;
+  --text: 244 238 255;
+  --muted: 174 165 191;
+  --accent: 236 72 153;
+  --accent-2: 251 146 60;
+  --border: 78 58 102;
+  --font-body: "Sora", ui-sans-serif, system-ui;
+  --font-display: "Bebas Neue", "Oswald", ui-sans-serif, system-ui;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgb(var(--accent) / 0.35);
+}
+
+.mesh-bg {
+  background-image: radial-gradient(circle at 20% 20%, rgb(var(--accent) / 0.18), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgb(var(--accent-2) / 0.18), transparent 40%),
+    radial-gradient(circle at 30% 80%, rgb(var(--accent) / 0.12), transparent 42%);
+}
+
+.glass {
+  background: linear-gradient(135deg, rgb(var(--card) / 0.82), rgb(var(--surface) / 0.4));
+  border: 1px solid rgb(var(--border) / 0.35);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 60px -40px rgb(0 0 0 / 0.65);
+}
+
+.glow-ring {
+  box-shadow: 0 0 0 1px rgb(var(--accent) / 0.4), 0 0 30px rgb(var(--accent) / 0.35);
+}
+
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glitch::before {
+  color: rgb(var(--accent));
+  transform: translate(2px, -2px);
+  clip-path: inset(0 0 55% 0);
+  animation: glitch 2.6s infinite linear alternate-reverse;
+  opacity: 0.8;
+}
+
+.glitch::after {
+  color: rgb(var(--accent-2));
+  transform: translate(-2px, 2px);
+  clip-path: inset(55% 0 0 0);
+  animation: glitch 2.2s infinite linear alternate;
+  opacity: 0.75;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(2px, -2px);
+  }
+  25% {
+    transform: translate(-1px, 2px);
+  }
+  50% {
+    transform: translate(3px, 1px);
+  }
+  75% {
+    transform: translate(-2px, -1px);
+  }
+  100% {
+    transform: translate(1px, -2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glitch::before,
+  .glitch::after {
+    animation: none;
+  }
+}
